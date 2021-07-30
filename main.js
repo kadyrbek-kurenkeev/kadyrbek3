@@ -21,24 +21,18 @@ var min = function(a,b){
 }
 // задание 2
 
-var symb = "a", str = "dddbbaaaccad";
-function count(str, symb) {
-
-  for (var count = -1, index = 0; index != -1; count++, index = str.indexOf(symb, index + 1));
-
-  return count;
-}
-
-console.log(count(str, symb));
+console.log(("addbacaa".match(/a/g) || []).length);
 
 // задание 3
 
-const grades = [1, 2, 3,];
-
-var total = 0;
-for(var i = 0; i < grades.length; i++) {
-    total += grades[i];
+var number = [1, 2, 3, 4, 5]; 
+function average(number) {
+    var sum = 0,
+        count = 0;
+    for (var count = number.length, i = count - 1; i >= 0; i--) {
+        sum += number[i];
+    }
+    return count ? sum / count : 0;
 }
-var avg = total / grades.length;
 
-console.log(avg);
+console.log(average(number));
